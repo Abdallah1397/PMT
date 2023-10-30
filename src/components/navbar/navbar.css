@@ -1,0 +1,85 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+}
+.pmtLogo {
+  width: 6rem;
+}
+.navbarLinks {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.link {
+  padding: 1rem;
+}
+.active {
+  color: #c12629;
+}
+.menuIcon,
+.socialMediaWrapper {
+  display: none;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+/* To animate the bars */
+.animated .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.animated .bar2 {
+  opacity: 0;
+}
+.animated .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.1rem 1rem;
+  }
+  .menuIcon,
+  .socialMediaWrapper {
+    display: block;
+  }
+  .navbarContent {
+    height: 0;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    z-index: 111;
+    position: fixed;
+    /* margin-top: 70px; */
+    transition: height 0.4s ease-in-out;
+    overflow: hidden; /* overflow hidden to hide the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .toggled {
+    height: 100vh;
+    transition: height 0.4s ease-in-out;
+  }
+  .navbarLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+  .socialMediaIcons {
+    display: flex;
+    justify-content: center;
+  }
+}
