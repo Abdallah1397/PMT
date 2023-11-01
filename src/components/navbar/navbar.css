@@ -1,4 +1,4 @@
-.navbar {
+.pmtNavbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +46,7 @@
   transform: translate(0, -11px) rotate(45deg);
 }
 @media screen and (max-width: 768px) {
-  .navbar {
+  .pmtNavbar {
     padding: 0.1rem 1rem;
   }
   .menuIcon,
@@ -56,7 +56,7 @@
   .navbarContent {
     height: 0;
     width: 100%;
-    top: 70px;
+    top: 68px;
     left: 0;
     z-index: 111;
     position: fixed;
@@ -66,6 +66,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
+    z-index: 111;
   }
   .toggled {
     height: 100vh;

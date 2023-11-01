@@ -6,7 +6,7 @@ import "./navbar.css";
 const Navbar = () => {
   const [isToggledMenu, setIsToggledMenu] = useState(false);
   return (
-    <div className="navbar">
+    <div className="pmtNavbar">
       {/* Logo page */}
       <img
         src={require("../../assets/images/pmt.jpg")}

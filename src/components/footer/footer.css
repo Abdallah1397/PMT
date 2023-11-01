@@ -1,0 +1,33 @@
+.footer{
+    background-color:#333333 ;
+    color: white;
+    padding: 2rem;
+}
+.footerLogo{
+    width:10rem;
+}
+.footerSocialMedia{
+    display: flex;
+    justify-content: start;
+    margin-top: 1rem;
+}
+.sectionName{
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.sectionColor{
+    color: rgba(255, 251, 251, 0.219);
+    line-height: 1.3rem;
+    
+}
+.copyRights{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+@media screen and (max-width:768px) {
+    .footer{
+        padding: 2rem 1.2rem;
+    }
+}
