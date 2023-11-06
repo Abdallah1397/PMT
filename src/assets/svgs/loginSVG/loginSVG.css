@@ -1,0 +1,29 @@
+svg#freepik_stories-tablet-login:not(.animated) .animable {
+  opacity: 0;
+}
+svg#freepik_stories-tablet-login.animated #freepik--Plant--inject-2 {
+  animation: 1.8s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-tablet-login.animated #freepik--Device--inject-2 {
+  animation: 3s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-tablet-login.animated #freepik--character-1--inject-2 {
+  animation: 2.5s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-tablet-login.animated #freepik--speech-bubble--inject-2 {
+  animation: 1.9s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
