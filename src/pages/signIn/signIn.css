@@ -1,27 +1,33 @@
-.loginContainer{
+.loginContainer {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F1EFEF;
+  flex-wrap: nowrap;
+  background-color: #f1efef;
 }
 .loginWrapper {
   height: 90%;
   width: 90%;
-  border: 1px solid #e5e5e5;
-  padding: .3rem;
   border-radius: 5px;
   background-color: #fff;
+  display: flex;
+  align-items: center;
 }
-.loginSVG{
+.svgWrapper{
+  height: 100%;
+  padding: 0.5rem 0;
+
+}
+.loginSVG {
   display: flex;
   justify-content: center;
-  background-color: #F1EFEF;
+  background-color: #f1efef;
   overflow: hidden;
-  height: 100%;
+  height: inherit;
   border-radius: 5px;
 }
-.formWrapper{
+.formWrapper {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -33,15 +39,13 @@
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
-  /* margin-bottom: 2rem; */
 }
-.logoPage{
+.logoPage {
   width: 10rem;
   /* margin: 2rem 0; */
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .loginWrapper {
     height: 80%;
     display: flex;
@@ -49,7 +53,7 @@
     align-items: center;
     border: 1px solid #e5e5e5;
   }
-  .loginSVG{
+  .loginSVG {
     display: none;
   }
 }
