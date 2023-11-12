@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   IconButton,
   InputAdornment,
@@ -7,6 +7,7 @@ import {
   LinearProgress,
   Alert,
 } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
 import {
   LockOutlined,
   PersonOutline,
@@ -15,9 +16,9 @@ import {
 } from "@mui/icons-material";
 import "./signIn.css";
 import LoginSVG from "../../assets/svgs/loginSVG/loginSVG";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../interceptors/axiosInstance";
-
+import { setUserStatus } from "../../redux/user.js";
 // Sign In Component
 const SignIn = () => {
   /*
@@ -25,6 +26,21 @@ const SignIn = () => {
    * this .current used to hold a mutable value and it persists across re-renders
    */
   const isMounted = useRef(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  // get user status that contains the username and isAuth status
+  const userStatus = useSelector((state) => state.user);
+  // destructuring the userStatus
+  const {isAuth}=userStatus;
+  useEffect(() => {
+    if(isAuth){
+      navigate('/');
+    }
+    return () => {
+      isMounted.current = true;
+    };
+  }, [isAuth]);
+
   // Loading State
   const [isLoading, setIsLoading] = useState(false);
   // userInfo State
@@ -76,6 +92,7 @@ const SignIn = () => {
         if (!isMounted.current) {
           // turn off loading progress
           setIsLoading(false);
+          dispatch(setUserStatus(userInfo.username));
         }
       })
       .catch((err) => {

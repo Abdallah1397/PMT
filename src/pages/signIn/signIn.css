@@ -17,7 +17,6 @@
 .svgWrapper{
   height: 100%;
   padding: 0.5rem 0;
-
 }
 .loginSVG {
   display: flex;
@@ -53,7 +52,7 @@
     align-items: center;
     border: 1px solid #e5e5e5;
   }
-  .loginSVG {
+  .svgWrapper {
     display: none;
   }
 }

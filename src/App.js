@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       {/* <Navbar /> */}
       <Routes>
-        <Route path="/login" element={<SignIn />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
       {/* Error Handlers */}
       <AxiosErrorHanlder/>
