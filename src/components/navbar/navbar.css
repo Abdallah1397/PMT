@@ -1,26 +1,44 @@
 .pmtNavbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   border-bottom: 1px solid #eaeaea;
   position: sticky;
   top: 0;
+  z-index: 111;
+  background-color: #fff;
+}
+.logoWrapper {
+  flex-grow: 12;
 }
 .pmtLogo {
   width: 6rem;
+}
+.navbarContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 .navbarLinks {
   display: flex;
   align-items: center;
   text-transform: capitalize;
   font-weight: 600;
+  margin: 0;
 }
 .link {
   padding: 1rem;
 }
 .active {
   color: #c12629;
+}
+.accountInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-weight: 600;
 }
 .menuIcon,
 .socialMediaWrapper {
@@ -45,6 +63,7 @@
 .animated .bar3 {
   transform: translate(0, -11px) rotate(45deg);
 }
+
 @media screen and (max-width: 768px) {
   .pmtNavbar {
     padding: 0.1rem 1rem;
@@ -66,12 +85,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
     background-color: #fff;
     z-index: 111;
   }
   .toggled {
     height: 100vh;
     transition: height 0.4s ease-in-out;
+  }
+  .accountInfo {
+    order: -1;
+    width: inherit;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
   }
   .navbarLinks {
     display: flex;

@@ -1,18 +1,31 @@
 import React, { useState } from "react";
+import {  IconButton, Tooltip } from "@mui/material";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import { useSelector, useDispatch } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
+import { logout } from "../../redux/user";
 import "./navbar.css";
 
 // Navbar
 const Navbar = () => {
+  // Get the user state
+  const user = useSelector((state) => state.user);
+  // Destructuring the state
+  const { username } = user;
+  // Dispatch Actions
+  const dispatch = useDispatch();
+  // State for showing dropdown menu
   const [isToggledMenu, setIsToggledMenu] = useState(false);
   return (
     <div className="pmtNavbar">
       {/* Logo page */}
-      <img
-        src={require("../../assets/images/pmt.jpg")}
-        alt="Logo"
-        className="pmtLogo"
-      />
+      <div className="logoWrapper">
+        <img
+          className="pmtLogo"
+          src={require("../../assets/images/pmt.jpg")}
+          alt="Logo"
+        />
+      </div>
       <div
         className={isToggledMenu ? "navbarContent toggled" : "navbarContent"}
       >
@@ -40,6 +53,15 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
+        {/* User Account */}
+        <div className="accountInfo">
+          <p>{username}</p>
+          <IconButton onClick={() => dispatch(logout())}>
+            <Tooltip title="Logout">
+              <LogoutOutlinedIcon fontSize="large" color="error" />
+            </Tooltip>
+          </IconButton>
+        </div>
         {/* Social Media Wrapper */}
         <div className="socialMediaWrapper">
           <img
