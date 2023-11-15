@@ -12,7 +12,6 @@
   border-radius: 5px;
   background-color: #fff;
   display: flex;
-  align-items: center;
 }
 .svgWrapper{
   height: 100%;
@@ -38,10 +37,10 @@
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 0;
 }
 .logoPage {
-  width: 10rem;
-  /* margin: 2rem 0; */
+  width: 8rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -49,7 +48,6 @@
     height: 80%;
     display: flex;
     justify-content: center;
-    align-items: center;
     border: 1px solid #e5e5e5;
   }
   .svgWrapper {

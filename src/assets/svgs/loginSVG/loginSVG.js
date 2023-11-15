@@ -383,7 +383,7 @@ function LoginSVG() {
             transformOrigin: 89.34,
           }}
           id="elldtih7wgis"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -405,7 +405,7 @@ function LoginSVG() {
             transformOrigin: 72.1496,
           }}
           id="eldojgsimrnz6"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -449,7 +449,7 @@ function LoginSVG() {
             transformOrigin: 51.2898,
           }}
           id="el9qj5yvuin3"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -998,7 +998,7 @@ function LoginSVG() {
             transformOrigin: 248.03,
           }}
           id="el21bmo5jk93x"
-          fill="#407BFF"
+          fill="#C53F3F"
           d="M230.59 309.66H265.47V320.51000000000005H230.59z"
           className="animable"
         ></path>
@@ -1099,7 +1099,7 @@ function LoginSVG() {
             transformOrigin: 258.643,
           }}
           id="elavegf6xc9o"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -1132,7 +1132,7 @@ function LoginSVG() {
             transformOrigin: 241.65,
           }}
           id="el0gwjlv26ub8c"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -1165,7 +1165,7 @@ function LoginSVG() {
             transformOrigin: 228.841,
           }}
           id="elyl62nxgz84q"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -1507,7 +1507,7 @@ function LoginSVG() {
             transformOrigin: 237.977,
           }}
           id="el2kjtgttwjr"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -1705,7 +1705,7 @@ function LoginSVG() {
             transformOrigin: 294.583,
           }}
           id="el2pb339bcwd4"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -1870,7 +1870,7 @@ function LoginSVG() {
             transformOrigin: 325.334,
           }}
           id="elb7yia0z3gzf"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -1914,7 +1914,7 @@ function LoginSVG() {
             transformOrigin: 375.024,
           }}
           id="elvh1yjksuho"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -1991,7 +1991,7 @@ function LoginSVG() {
             transformOrigin: 392.259,
           }}
           id="elpfbyvjyoo5"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -2476,7 +2476,7 @@ function LoginSVG() {
             transformOrigin: 415.25,
           }}
           id="elyrti0oc0hyr"
-          fill="#407BFF"
+          fill="#C53F3F"
           className="animable"
         ></path>
         <path
@@ -2486,7 +2486,7 @@ function LoginSVG() {
             transformOrigin: 409.335,
           }}
           id="ele7i199bctnk"
-          fill="#407BFF"
+          fill="#C53F3F"
           d="M407.91 247.6H410.76000000000005V256.27H407.91z"
           className="animable"
           transform="rotate(-45)"

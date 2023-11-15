@@ -1,0 +1,57 @@
+.signupContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #f1efef;
+  }
+  .signupWrapper {
+    height: 90%;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+  }
+  .svgWrapper{
+    height: 100%;
+    padding: 0.5rem 0;
+  }
+  .signupSVG {
+    display: flex;
+    justify-content: center;
+    background-color: #f1efef;
+    overflow: hidden;
+    height: inherit;
+    border-radius: 5px;
+  }
+  .formWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 90%;
+    text-align: center;
+  }
+  .signupTitle {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .logoPage {
+    width: 8rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .signupWrapper {
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      border: 1px solid #e5e5e5;
+    }
+    .svgWrapper {
+      display: none;
+    }
+  }
+  

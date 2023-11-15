@@ -6,6 +6,7 @@ import AxiosErrorHanlder from "./interceptors/axiosInterceptors";
 import PrivateRouter from "./utils/privateRouter";
 import SignIn from "./pages/signIn/signIn";
 import Home from "./pages/home/home";
+import SignUp from "./pages/signup/signUp";
 function App() {
   // select the user state
   const user = useSelector((state) => state.user);
@@ -14,10 +15,11 @@ function App() {
     <div className="App">
       {isAuth && <Navbar />}
       <Routes>
-        <Route path="/signin" element={<SignIn />} />
         <Route element={<PrivateRouter />}>
           <Route path="/" element={<Home />} />
         </Route>
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
       {/* Error Handlers */}
       <AxiosErrorHanlder />
