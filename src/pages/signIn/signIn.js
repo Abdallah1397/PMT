@@ -3,7 +3,6 @@ import {
   IconButton,
   InputAdornment,
   TextField,
-  Button,
   LinearProgress,
   Alert,
 } from "@mui/material";
@@ -19,6 +18,7 @@ import LoginSVG from "../../assets/svgs/loginSVG/loginSVG";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../interceptors/axiosInstance";
 import { setUserStatus } from "../../redux/user.js";
+import PrimaryButton from "../../components/primaryButton/primaryButton";
 // Sign In Component
 const SignIn = () => {
   /*
@@ -113,7 +113,7 @@ const SignIn = () => {
     <div className="container-fluid loginContainer">
       <div className="row loginWrapper">
         {/* Linear Progress */}
-        {isLoading && <LinearProgress />}
+        {isLoading && <LinearProgress color="error" />}
         <div className="svgWrapper col-md-6 col-lg-8">
           <div className="loginSVG ">
             <LoginSVG />
@@ -179,16 +179,7 @@ const SignIn = () => {
             </div>
             {/* Submit Button */}
             <div className="mt-3">
-              <Button
-                disabled={isLoading ? true : false}
-                className="submitButton"
-                type="submit"
-                variant="contained"
-                fullWidth
-                style={{backgroundColor:'#c1262a'}}
-              >
-                Login
-              </Button>
+             <PrimaryButton text="Login" disabled={isLoading} fullWidth/>
             </div>
             {/* Error Alerts */}
             <div className="mt-2">
