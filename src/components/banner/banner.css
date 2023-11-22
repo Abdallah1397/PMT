@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 30vh;
 }
 .bannerTitle {
   font-weight: 600;
@@ -17,6 +18,8 @@
   .banner {
     padding: 2rem !important;
     background-color: #fcfafa;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1011%26quot%3b)' fill='none'%3e%3cpath d='M720 571.57C792.29 571.48 840.01 502.09 888.17 448.17 932.43 398.6 974.01 346.15 980.35 280 987.34 207.03 976.26 127.41 923.83 76.17 871.78 25.31 792.62 20.88 720 25.59 652.81 29.95 591.32 56.3 540.99 100.99 486.87 149.03 431.23 207.64 433.41 280 435.54 351.28 501.45 397.72 551.44 448.56 602.12 500.13 647.69 571.65 720 571.57' fill='rgba(230%2c 189%2c 190%2c 1)'%3e%3c/path%3e%3cpath d='M720 412.53C752.86 412.49 774.55 380.95 796.44 356.44 816.56 333.91 835.46 310.07 838.34 280 841.52 246.83 836.48 210.64 812.65 187.35 788.99 164.23 753.01 162.22 720 164.36 689.46 166.34 661.51 178.32 638.63 198.63 614.03 220.47 588.74 247.11 589.73 280 590.7 312.4 620.66 333.51 643.38 356.62 666.42 380.06 687.13 412.57 720 412.53' fill='rgba(236%2c 204%2c 204%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1011'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
   }
   .svgBanner {
     display: none;
