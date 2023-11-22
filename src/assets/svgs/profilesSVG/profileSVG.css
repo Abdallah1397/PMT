@@ -1,0 +1,38 @@
+svg#freepik_stories-mobile-testing:not(.animated) .animable {
+  opacity: 0;
+}
+svg#freepik_stories-mobile-testing.animated
+  #freepik--background-complete--inject-19 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-mobile-testing.animated #freepik--Screens--inject-19 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-mobile-testing.animated #freepik--Device--inject-19 {
+  animation: 1.2s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-mobile-testing.animated #freepik--Plant--inject-19 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-mobile-testing.animated #freepik--character-2--inject-19 {
+  animation: 1.5s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-mobile-testing.animated #freepik--character-1--inject-19 {
+  animation: 1.5s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) zoomIn;
+  animation-delay: 0s;
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
