@@ -1,0 +1,22 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.lineTitle {
+  height: 0.09px;
+  background-color: #e6e6e8;
+  width: 40%;
+}
+.headingTitle {
+  color: #3a3a3a;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .lineTitle {
+    width: 20%;
+  }
+}
