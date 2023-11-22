@@ -1,0 +1,27 @@
+.flexDisplay {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.1rem 0;
+}
+.profileCard {
+  min-height: 20rem;
+}
+.cardAvatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profileName {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  text-align: center;
+}
+.cardInfo {
+  color: #b7b7b7;
+  font-weight: 600;
+}
+.cardActions {
+  padding: 1.5rem 1rem !important;
+  justify-content: flex-end;
+}
