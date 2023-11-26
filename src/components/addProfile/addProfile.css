@@ -1,0 +1,14 @@
+.addProfileCard {
+    min-height: 21rem;
+    max-height: 21rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .profileCardContent{
+    padding: 0 !important;
+    width: 100%;
+  }
+  .addProfileImg {
+    width: inherit;
+  }
