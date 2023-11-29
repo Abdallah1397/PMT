@@ -19,12 +19,18 @@ function stringToColor(string) {
 }
 
 export function stringAvatar(name) {
+  let splitName = name.split(" ");
+  if (splitName[1] == undefined) {
+    splitName = name[0];
+  } else {
+    splitName = splitName[0][0]+splitName[1][0];
+  }
   return {
     sx: {
       bgcolor: stringToColor(name),
       width: 56,
       height: 56,
     },
-    children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
+    children: splitName,
   };
 }
