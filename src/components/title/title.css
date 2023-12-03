@@ -6,17 +6,22 @@
 }
 .lineTitle {
   height: 0.09px;
-  background-color: #e6e6e8;
-  width: 40%;
+  background-color: #c1c1c1;
+  width: 20%;
 }
 .headingTitle {
   color: #3a3a3a;
   text-transform: uppercase;
   font-size: 2.4rem;
   font-weight: 500;
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .lineTitle {
-    width: 20%;
+    width: 15%;
+  }
+  .headingTitle {
+    font-size: 1.6rem;
+    font-weight: 600;
   }
 }
