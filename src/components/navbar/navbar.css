@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  border-bottom: 1px solid #eaeaea;
   position: sticky;
   top: 0;
   z-index: 111;
@@ -13,6 +12,19 @@
 }
 .pmtLogo {
   width: 6rem;
+}
+.signinLink {
+  padding: 0.5rem 1em;
+  color: #fff;
+  border: 1px solid #c12629;
+  /* "to left" / "to right" - affects initial color */
+  background: linear-gradient(to left, #c12629 50%, #fff 50%) right;
+  background-size: 250%;
+  transition: 0.5s ease-out;
+}
+.signinLink:hover {
+  background-position: left;
+  color: #c12629;
 }
 .navbarContent {
   display: flex;
@@ -64,7 +76,7 @@
   transform: translate(0, -11px) rotate(45deg);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .pmtNavbar {
     padding: 0.1rem 1rem;
   }
