@@ -5,8 +5,7 @@ import "./banner.css";
 
 const Banner = (props) => {
   return (
-    <div className="container-fluid banner">
-      <div className="row">
+      <div className="row banner">
         <div className="col-md-6 bannerTopic">
           <h1 className="bannerTitle">{props.title}</h1>
           {props.subTitle && <p>{props.subTitle}</p>}
@@ -20,7 +19,6 @@ const Banner = (props) => {
         </div>
         <div className="col-md-6 svgBanner">{props.svgBanner}</div>
       </div>
-    </div>
   );
 };
 
