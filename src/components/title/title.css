@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
+  margin: 1rem 0;
 }
 .lineTitle {
   height: 0.09px;
@@ -17,6 +18,10 @@
   text-align: center;
 }
 @media screen and (max-width: 767px) {
+  .title {
+    margin:0;
+    padding: 1rem;
+  }
   .lineTitle {
     width: 15%;
   }
