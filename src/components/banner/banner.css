@@ -14,6 +14,14 @@
 .getStartedButton {
   margin-top: 3rem;
 }
+.svgBanner {
+  min-height: 72vh;
+  max-height: 72vh;
+}
+.svgBanner > svg {
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 767px) {
   .banner {
     padding: 2rem !important;
