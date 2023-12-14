@@ -39,7 +39,7 @@ const AxiosErrorHanlder = () => {
           timeoutErr: false,
           validationErr: false,
           errorMsg:
-            "Interak Server Error, please contact system administrator!",
+            "Interal Server Error, please contact system administrator!",
         });
       }
       throw error; // Propagate the error
