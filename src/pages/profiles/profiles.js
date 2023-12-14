@@ -2,12 +2,10 @@ import React, { useRef, useState, useEffect } from "react";
 import ProfileCard from "../../components/profileCard/profileCard";
 import { api } from "../../interceptors/axiosInstance";
 import Banner from "../../components/banner/bannner";
-
 import "./profiles.css";
 import ProfileSVG from "../../assets/svgs/profilesSVG/profileSVG";
 import Title from "../../components/title/title";
 import DeleteDialog from "../../components/deleteDialog/deleteDialog";
-import { CardContent, Card } from "@mui/material";
 import AddProfileCard from "../../components/addProfile/addProfile";
 import SaveDialog from "../../components/saveDialog/saveDialog";
 import Hero from "../../components/hero/hero";
@@ -34,11 +32,8 @@ const Profiles = () => {
   const [newProfileInfo, setNewProfileInfo] = useState({
     name: "",
     phone: "",
-    speed: "",
-    pop_name: "",
-    dslam_hostname: "DSLAM",
-    frame: "20",
-    attainable_speed: "5500",
+    age: "",
+    email: "",
   });
   // Save Dialog
   const [saveDialog, setSaveDialog] = useState({
@@ -73,10 +68,11 @@ const Profiles = () => {
   const getAllProfiles = () => {
     // HTTP request to get all profiles
     api
-      .get("profiles/")
+      .get("profiles")
       .then((res) => {
         if (isMounted.current) {
           setAllProfiles(res.data);
+          console.log(res.data.length);
         }
       })
       .catch((err) => {
@@ -123,11 +119,8 @@ const Profiles = () => {
     setNewProfileInfo({
       name: "",
       phone: "",
-      speed: "",
-      pop_name: "",
-      dslam_hostname: "DSLAM",
-      frame: "20",
-      attainable_speed: "5500",
+      age: "",
+      email: "",
     });
     // Clear Selected Profile
     setSelectedProfile({});
@@ -157,7 +150,7 @@ const Profiles = () => {
     setSavingProgress(true);
     // HTTP request to create a new profile
     api
-      .post("profiles/", newProfileInfo)
+      .post("profiles", newProfileInfo)
       .then((res) => {
         if (isMounted.current) {
           // Turn off loading progress
@@ -215,7 +208,7 @@ const Profiles = () => {
     setSavingProgress(true);
     // HTTP request to create a new profile
     api
-      .put(`profiles/${selectedProfile.id}/`, selectedProfile)
+      .put(`profiles/${selectedProfile._id}/`, selectedProfile)
       .then((res) => {
         if (isMounted.current) {
           // Turn off loading progress
@@ -271,7 +264,7 @@ const Profiles = () => {
     // turn on linear progress
     setDeletingProgress(true);
     api
-      .delete(`profiles/${selectedProfile.id}`)
+      .delete(`profiles/${selectedProfile._id}`)
       .then((res) => {
         if (isMounted.current) {
           // turn off loading progress
@@ -279,7 +272,7 @@ const Profiles = () => {
           // To inhance the ui we will call the data again
           getAllProfiles();
           // close the dialog
-          setDeleteDialogStatus(false);
+          closeDeleteDialog();
         }
       })
       .catch((err) => {
@@ -311,8 +304,8 @@ const Profiles = () => {
                 <ProfileCard
                   name={item.name}
                   phone={item.phone}
-                  speed={item.speed}
-                  pop_name={item.pop_name}
+                  age={item.age}
+                  email={item.email}
                   deleteProfile={() => openDeleteDialog(item)}
                   updateProfile={() =>
                     openSaveDialog(
@@ -355,13 +348,13 @@ const Profiles = () => {
         phone={
           selectedProfile.phone ? selectedProfile.phone : newProfileInfo.phone
         }
-        speed={
-          selectedProfile.speed ? selectedProfile.speed : newProfileInfo.speed
+        email={
+          selectedProfile.email ? selectedProfile.email : newProfileInfo.email
         }
-        pop_name={
-          selectedProfile.pop_name
-            ? selectedProfile.pop_name
-            : newProfileInfo.pop_name
+        age={
+          selectedProfile.age
+            ? selectedProfile.age
+            : newProfileInfo.age
         }
         openedAlert={backendError || isEmpty || isSuccess}
         alertType={alertType}
