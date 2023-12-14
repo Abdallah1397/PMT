@@ -30,6 +30,18 @@ const SaveDialog = (props) => {
           </div>
           <div className="col-12 col-md-6 mt-2">
             <TextField
+              label="Email"
+              variant="outlined"
+              size="small"
+              fullWidth
+              id="email"
+              onChange={props.onChange}
+              type="email"
+              value={props.email}
+            />
+          </div>
+          <div className="col-12 col-md-6 mt-2">
+            <TextField
               label="Phone Number"
               variant="outlined"
               size="small"
@@ -42,25 +54,14 @@ const SaveDialog = (props) => {
           </div>
           <div className="col-12 col-md-6 mt-2">
             <TextField
-              label="Speed"
+              label="Age"
               variant="outlined"
               size="small"
               fullWidth
-              id="speed"
+              id="age"
               onChange={props.onChange}
+              value={props.age}
               type="number"
-              value={props.speed}
-            />
-          </div>
-          <div className="col-12 col-md-6 mt-2">
-            <TextField
-              label="POP Name"
-              variant="outlined"
-              size="small"
-              fullWidth
-              id="pop_name"
-              onChange={props.onChange}
-              value={props.pop_name}
             />
           </div>
         </div>
