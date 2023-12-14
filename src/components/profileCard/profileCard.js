@@ -12,20 +12,20 @@ const ProfileCard = (props) => {
           <Avatar {...stringAvatar(props.name)} />
           <h1 className="profileName">{props.name}</h1>
         </div>
+        {/* Email */}
+        <div className="flexDisplay">
+          <p className="cardInfo">Email</p>
+          <p>{props.email}</p>
+        </div>
         {/* Phone Number */}
         <div className="flexDisplay">
           <p className="cardInfo">Phone</p>
           <p>{props.phone}</p>
         </div>
-        {/* Speed*/}
+        {/* Age*/}
         <div className="flexDisplay">
-          <p className="cardInfo">Speed</p>
-          <p>{props.speed}</p>
-        </div>
-        {/* POP Name */}
-        <div className="flexDisplay">
-          <p className="cardInfo">POP Name</p>
-          <p>{props.pop_name}</p>
+          <p className="cardInfo">Age</p>
+          <p>{props.age}</p>
         </div>
       </CardContent>
       <CardActions className="cardActions">
