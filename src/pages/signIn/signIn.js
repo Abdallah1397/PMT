@@ -87,7 +87,7 @@ const SignIn = () => {
     setIsLoading(true);
     // HTTP request to make the user is Authenticated
     api
-      .post("api/token/", { ...userInfo })
+      .post("auth/login", { ...userInfo })
       .then((res) => {
         if (!isMounted.current) {
           // turn off loading progress
