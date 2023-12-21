@@ -39,6 +39,8 @@ const SignUp = () => {
     password: "",
     confirmedPassword: "",
   });
+  // Destruct the userInfo state
+  const { username, password, confirmedPassword } = userInfo;
   // Password Visability
   const [showPassword, setShowPassword] = useState(false);
   // Error states
@@ -75,7 +77,7 @@ const SignUp = () => {
       return;
     }
     // Check if the input password and the confirmed password are equal or not
-    if (userInfo.password !== userInfo.confirmedPassword) {
+    if (password !== confirmedPassword) {
       setErrorStates({
         notMatchingPasswords: true,
         isEmpty: false,
@@ -87,7 +89,7 @@ const SignUp = () => {
     setIsLoading(true);
     // HTTP request to make the user is registered
     api
-      .post("users/", { ...userInfo })
+      .post("auth/register", { username, password })
       .then((res) => {
         if (!isMounted.current) {
           // turn off loading progress
@@ -202,7 +204,7 @@ const SignUp = () => {
                 type="submit"
                 variant="contained"
                 fullWidth
-                style={{backgroundColor:'#c1262a'}}
+                style={{ backgroundColor: "#c1262a" }}
               >
                 Sign Up
               </Button>
